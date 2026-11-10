@@ -1,0 +1,25 @@
+type: Radar
+size: 2
+group: projectors
+canOverdrive: false
+category: effect
+buildVisibility: fogOnly
+requirements: [
+lead/100,
+graphite/105,
+silicon/60,
+titanium/40
+]
+health: 120
+fogRadius: 70
+discoveryTime: 3672
+consumes: {
+    power: 12
+}
+rotateSpeed: 1.5
+research: {
+    parent: sbc-rls-1
+    objectives: [
+    overdrive-projector
+  ]
+}
