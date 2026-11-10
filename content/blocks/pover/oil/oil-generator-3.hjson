@@ -1,0 +1,88 @@
+type: ConsumeGenerator
+size: 4
+hasPower: true
+powerProduction: 81
+ambientSound: loopSteam
+generateEffect: {
+    type: RadialEffect
+    amount: 10
+    rotationSpacing: 45
+    effect: {
+        particles: 1
+        length: 50
+        lifetime: 240
+        cone: 11
+        baseRotation: 35
+        useRotation: false
+        sizeFrom: 0
+        sizeTo: 7
+        colorFrom: 787878
+        colorTo: 78787800
+        sizeInterp: pow2Out
+        interp: pow2Out
+    }
+}
+consumes: {
+    liquid: {
+        liquid: oil
+        amount: 0.9
+    }
+}
+category: power
+group: power
+requirements: [
+    copper/280
+    lead/320
+    silicon/240
+    plastanium/130
+    metaglass/120
+]
+research: {
+    parent: sbc-oil-generator-2
+}
+
+drawer: {
+    type: DrawMulti
+    drawers: [{
+        type: drawRegion
+        suffix: -bottom
+    }
+        {
+            type: DrawLiquidTile
+            drawLiquid: oil
+        }
+        {
+            type: DrawDefault
+        }]
+}
+
+explosionRadius: 15
+explosionDamage: 1500
+explosionPuddles: 250
+explosionPuddleRange: 90
+explosionPuddleAmount: 70
+explosionPuddleLiquid: oil
+explodeEffect: {
+    type: MultiEffect
+    effects: [{
+        type: WaveEffect
+        lifetime: 30
+        sizeFrom: 0
+        sizeTo: 120
+        strokeFrom: 15
+        strokeTo: 0
+        colorFrom: ffaa55
+        colorTo: ff550000
+    }
+        {
+            type: ParticleEffect
+            particles: 25
+            length: 70
+            lifetime: 50
+            sizeFrom: 10
+            sizeTo: 0
+            colorFrom: ffcc88
+            colorTo: 444444
+            interp: pow2Out
+        }]
+}

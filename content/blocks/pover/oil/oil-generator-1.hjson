@@ -1,1 +1,91 @@
+type: ConsumeGenerator
+size: 2
+hasPower: true
+powerProduction: 15.75
+ambientSound: loopSteam
+generateEffect: {
+    type: RadialEffect
+    amount: 6
+    rotationSpacing: 45
+    effect: {
+        particles: 1
+        length: 16
+        lifetime: 200
+        cone: 11
+        baseRotation: 35
+        useRotation: false
+        sizeFrom: 0
+        sizeTo: 4.5
+        colorFrom: 787878
+        colorTo: 78787800
+        sizeInterp: pow2Out
+        interp: pow2Out
+    }
+}
+consumes: {
+    liquid: {
+        liquid: oil
+        amount: 0.2
+    }
+}
+category: power
+group: power
+requirements: [
+    copper/35
+    lead/40
+    silicon/30
+    graphite/25
+    metaglass/15
+]
+research: {
+    parent: steam-generator
+    objectives: [
+        oil
+        ]
+}
 
+drawer: {
+    type: DrawMulti
+    drawers: [{
+        type: drawRegion
+        suffix: -bottom
+    }
+        {
+            type: DrawLiquidTile
+            drawLiquid: oil
+        }
+        {
+            type: DrawDefault
+        }]
+}
+
+explosionRadius: 4
+explosionDamage: 400
+explosionPuddles: 62
+explosionPuddleRange: 32
+explosionPuddleAmount: 25
+explosionPuddleLiquid: oil
+explodeEffect: {
+    type: MultiEffect
+    effects: [{
+        type: WaveEffect
+        lifetime: 30
+        sizeFrom: 0
+        sizeTo: 32
+        strokeFrom: 4
+        strokeTo: 0
+        colorFrom: ffaa55
+        colorTo: ff550000
+    }
+        {
+            type: ParticleEffect
+            particles: 25
+            length: 15
+            lifetime: 25
+            sizeFrom: 5
+            sizeTo: 0
+            colorFrom: ffcc88
+            colorTo: 444444
+            interp: pow2Out
+        }]
+}
