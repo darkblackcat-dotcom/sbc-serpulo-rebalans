@@ -1,0 +1,29 @@
+category: effect
+size: 4
+sides: 8
+radius: 120
+health: 800
+shieldHealth: 3300
+itemCapacity: 20
+requirements: [
+  titanium/650,
+  silicon/600,
+  plastanium/450,
+  phase-fabric/400,
+]
+consumes: {
+  power: 18
+}
+shieldRotation: 22.5
+cooldownNormal: 6.4
+cooldownLiquid: 1.28
+cooldownBrokenBase: 0.44
+crashDamageMultiplier: 1.5
+coolantConsumption: 0.2
+
+phaseUseTime: 51
+phaseRadiusBoost: 80
+phaseShieldBoost: 2700
+
+research: force-projector
+group: projectors
