@@ -1,0 +1,93 @@
+type: ConsumeGenerator
+size: 4
+hasPower: true
+hasItems: true
+powerProduction: 37
+ambientSound: loopSteam
+itemCapacity: 35
+generateEffect: generatespark
+itemDuration: 25
+itemDurationMultipliers: {
+    coal: 1
+    spore-pod: 1
+    pyratite: 3.2
+    blast-compound: 1
+}
+consumes: {
+    itemFlammable: {}
+    liquid: {
+        liquid: oil
+        amount: 0.25
+    }
+    itemExplode: {
+        threshold: 0.5
+        damage: 1.4
+        baseChance: 0.9
+    }
+}
+outputLiquid: {
+    liquid: slag
+    amount: 0.2
+}
+category: power
+group: power
+
+requirements: [
+titanium/220
+silicon/200
+metaglass/90
+plastanium/180
+]
+research: {
+    parent: differential-generator
+}
+
+drawer: {
+    type: DrawMulti
+    drawers: [{
+        type: drawRegion
+        suffix: -bottom
+    }
+        {
+            type: DrawLiquidTile
+            drawLiquid: oil
+        }
+        {
+            type: DrawDefault
+        }
+        {
+            type: DrawWarmupRegion
+        }]
+}
+
+explodeOnFull: true
+explosionRadius: 10
+explosionDamage: 1200
+explosionPuddles: 200
+explosionPuddleRange: 60
+explosionPuddleAmount: 70
+explosionPuddleLiquid: oil
+explodeEffect: {
+    type: MultiEffect
+    effects: [{
+        type: WaveEffect
+        lifetime: 30
+        sizeFrom: 0
+        sizeTo: 80
+        strokeFrom: 10
+        strokeTo: 0
+        colorFrom: ffaa55
+        colorTo: ff550000
+    }
+        {
+            type: ParticleEffect
+            particles: 25
+            length: 70
+            lifetime: 50
+            sizeFrom: 10
+            sizeTo: 0
+            colorFrom: ffcc88
+            colorTo: 444444
+            interp: pow2Out
+        }]
+}
