@@ -1,0 +1,10 @@
+color: ff2a2a
+damage: 0.35
+healthMultiplier: 0.75
+reloadMultiplier: 0.9
+damageMultiplier: 0.9
+speedMultiplier: 0.8
+effect: none
+effectChance: 0
+permanent: false
+show: true
