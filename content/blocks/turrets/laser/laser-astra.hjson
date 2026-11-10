@@ -1,1 +1,69 @@
-
+type: PowerTurret
+category: turret
+size: 1
+health: 300
+range: 200
+trackingRange: 240
+fogRadiusMultiplier: 0.8
+reload: 120
+recoil: 1
+rotateSpeed: 15
+buildTime: 200
+coolantMultiplier: 10
+consumers: [{
+    type: consumeCoolant
+    amount: 0.1
+    optional: true
+}]
+liquidCapacity: 20
+consumes: {
+    power: 3.5
+}
+shootType: {
+    type: LaserBoltBulletType
+    damage: 30
+    speed: 8
+    lifetime: 25.5
+    width: 2
+    height: 6
+    pierce: true
+    pierceCap: 4
+    pierceBuilding: true
+    pierceDamageFactor: 0.05
+    hittable: false
+    reflectable: false
+    status: sbc-thermal-shock
+    statusDuration: 60
+    ammoMultiplier: 1
+    collidesAir: true
+    collidesGround: true
+    shootEffect: none
+    smokeEffect: none
+    hitEffect: hitLaserBlast
+    despawnEffect: none
+    hitColor: ff2a2a
+    backColor: ff2a2a
+    frontColor: ffb3b3
+    lightColor: ff2a2a
+    lightOpacity: 0.6
+}
+shoot: {
+    shots: 3
+    shotDelay: 4.5
+}
+shootY: 8
+targetAir: true
+targetGround: true
+shootSound: shoot-laser
+shootSoundVolume: 0.3
+soundPitchMin: 0.75
+soundPitchMax: 0.85
+heatColor: ff7a5a
+requirements: [
+copper/75,
+lead/75,
+graphite/25
+]
+research: {
+    parent: duo
+}

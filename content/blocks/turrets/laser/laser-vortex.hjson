@@ -1,0 +1,103 @@
+type: PowerTurret
+category: turret
+size: 3
+health: 1800
+range: 280
+trackingRange: 320
+fogRadiusMultiplier: 0.8
+reload: 40
+rotateSpeed: 7.5
+buildTime: 200
+coolantMultiplier: 2.5
+consumers: [{
+    type: consumeCoolant
+    amount: 0.4
+    optional: true
+}]
+liquidCapacity: 20
+consumes: {
+    power: 15.5
+}
+shootType: {
+    type: LaserBoltBulletType
+    damage: 90
+    speed: 8
+    lifetime: 35
+    width: 3
+    height: 8
+    pierce: true
+    pierceCap: 6
+    pierceBuilding: true
+    pierceDamageFactor: 0.01
+    hittable: false
+    reflectable: false
+    status: sbc-thermal-shock
+    statusDuration: 60
+    ammoMultiplier: 1
+    collidesAir: true
+    collidesGround: true
+    shootEffect: none
+    smokeEffect: none
+    hitEffect: hitLaserBlast
+    despawnEffect: none
+    hitColor: ff2a2a
+    backColor: ff2a2a
+    frontColor: ffb3b3
+    lightColor: ff2a2a
+    lightOpacity: 0.9
+}
+recoils: 2
+recoil: 0
+shoot: {
+    type: ShootMulti
+    source: {
+        type: ShootBarrel
+        barrels: [
+            -4, 5, 0
+            4, 5, 0
+        ]
+    }
+    dest: [{
+        type: ShootPattern
+        shots: 2
+        shotDelay: 5
+    }]
+}
+drawer: {
+    type: DrawTurret
+    parts: [{
+        type: RegionPart
+        suffix: -barrel-l
+        recoilIndex: 0
+        progress: recoil
+        under: true
+        moveY: -1
+        heatColor:  ff7a5a
+        heatProgress: recoil
+    }
+        {
+            type: RegionPart
+            suffix: -barrel-r
+            recoilIndex: 1
+            progress: recoil
+            under: true
+            moveY: -1
+            heatColor:  ff7a5a
+            heatProgress: recoil
+        }]
+}
+targetAir: true
+targetGround: true
+shootSound: shoot-laser
+shootSoundVolume: 0.4
+soundPitchMin: 0.55
+soundPitchMax: 0.65
+requirements: [
+graphite/125
+titanium/90
+silicon/125
+thorium/75
+]
+research: {
+    parent: sbc-laser-byran
+}

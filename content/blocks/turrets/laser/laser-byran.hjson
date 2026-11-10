@@ -1,0 +1,93 @@
+type: PowerTurret
+category: turret
+size: 2
+health: 750
+range: 240
+trackingRange: 280
+fogRadiusMultiplier: 0.8
+reload: 30
+rotateSpeed: 7.5
+buildTime: 200
+coolantMultiplier: 5
+consumers: [{
+    type: consumeCoolant
+    amount: 0.2
+    optional: true
+}]
+liquidCapacity: 20
+consumes: {
+    power: 12
+}
+shootType: {
+    type: LaserBoltBulletType
+    damage: 60
+    speed: 8
+    lifetime: 31
+    width: 3
+    height: 8
+    pierce: true
+    pierceCap: 4
+    pierceBuilding: true
+    pierceDamageFactor: 0.05
+    hittable: false
+    reflectable: false
+    status: sbc-thermal-shock
+    statusDuration: 60
+    ammoMultiplier: 1
+    collidesAir: true
+    collidesGround: true
+    shootEffect: none
+    smokeEffect: none
+    hitEffect: hitLaserBlast
+    despawnEffect: none
+    hitColor: ff2a2a
+    backColor: ff2a2a
+    frontColor: ffb3b3
+    lightColor: ff2a2a
+    lightOpacity: 0.75
+}
+recoils: 2
+recoil: 0
+shoot: {
+    type: ShootAlternate
+    spread: 5.5
+}
+shootY: 13
+drawer: {
+    type: DrawTurret
+    parts: [{
+        type: RegionPart
+        suffix: -barrel-l
+        recoilIndex: 0
+        progress: recoil
+        under: true
+        moveY: -1
+        heatColor:  ff7a5a
+        heatProgress: recoil
+    }
+        {
+            type: RegionPart
+            suffix: -barrel-r
+            recoilIndex: 1
+            progress: recoil
+            under: true
+            moveY: -1
+            heatColor:  ff7a5a
+            heatProgress: recoil
+        }]
+}
+targetAir: true
+targetGround: true
+shootSound: shoot-laser
+shootSoundVolume: 0.35
+soundPitchMin: 0.65
+soundPitchMax: 0.75
+requirements: [
+copper/125,
+graphite/60
+titanium/45
+silicon/60
+]
+research: {
+    parent: sbc-laser-astra
+}
