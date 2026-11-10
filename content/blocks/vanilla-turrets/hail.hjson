@@ -1,0 +1,4 @@
+range: 240
+trackingRange: 280
+fogRadiusMultiplier: 0.625
+minRange: 60

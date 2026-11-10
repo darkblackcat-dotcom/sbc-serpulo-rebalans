@@ -1,0 +1,143 @@
+inaccuracy: 13
+trackingRange: 440
+range: 400
+fogRadiusMultiplier: 0.625
+reload: 180
+minRange: 100
+ammoPerShot: 3
+maxAmmo: 30
+unitSort: grouped
+shoot: {
+    shots: 6
+}
+ammoTypes: {
+    graphite: {
+        type: ArtilleryBulletType
+        speed: 3
+        damage: 0
+        width: 11
+        height: 11
+        knockback: 0.8
+        lifetime: 80
+        collidesTiles: false
+        splashDamageRadius: 24
+        splashDamage: 70
+        backColor: 7d89d8
+        hitColor: 7d89d8
+        trailColor: 7d89d8
+        frontColor: dae1ee
+        despawnEffect: hitBulletColor
+        shootEffect: shootBigColor
+    }
+    silicon: {
+        type: ArtilleryBulletType
+        speed: 3
+        damage: 0
+        knockback: 0.8
+        width: 15
+        height: 15
+        lifetime: 80
+        reloadMultiplier: 1.2
+        ammoMultiplier: 3
+        homingPower: 0.08
+        homingRange: 50
+        homingDelay: 34
+        collidesTiles: false
+        splashDamageRadius: 21.5
+        splashDamage: 70
+        trailLength: 9
+        trailWidth: 3.1
+        despawnEffect: hitBulletColor
+        backColor: 707594
+        hitColor: 707594
+        trailColor: 707594
+        frontColor: 999ba0
+    }
+    pyratite: {
+        type: ArtilleryBulletType
+        speed: 3
+        damage: 0
+        hitEffect: blastExplosion
+        knockback: 0.8
+        width: 13
+        height: 13
+        lifetime: 80
+        collidesTiles: false
+        splashDamageRadius: 29.5
+        splashDamage: 70
+        status: burning
+        statusDuration: 720
+        frontColor: f8ad42
+        backColor: f68021
+        hitColor: f68021
+        makeFire: true
+        trailEffect: incendTrail
+        ammoMultiplier: 4
+        despawnEffect: hitBulletColor
+    }
+    blast-compound: {
+        type: ArtilleryBulletType
+        speed: 2
+        damage: 0
+        hitEffect: blastExplosion
+        knockback: 0.8
+        width: 14
+        height: 14
+        sprite: shell
+        lifetime: 80
+        rangeChange: -20
+        collidesTiles: false
+        splashDamageRadius: 51.5
+        splashDamage: 90
+        status: blasted
+        frontColor: eeab89
+        backColor: e9665b
+        hitColor: e9665b
+        shootEffect: shootBigColor
+        trailColor: e9665b
+        ammoMultiplier: 4
+        despawnEffect: hitBulletColor
+    }
+    plastanium: {
+        type: ArtilleryBulletType
+        speed: 3.4
+        damage: 0
+        hitEffect: plasticExplosion
+        knockback: 1
+        width: 13
+        height: 13
+        sprite: shell
+        lifetime: 80
+        rangeChange: -40
+        collidesTiles: false
+        splashDamageRadius: 36.5
+        shootEffect: shootBigColor
+        splashDamage: 90
+        fragBullet: {
+            type: BasicBulletType
+            speed: 2.5
+            damage: 14
+            sprite: bullet
+            width: 10
+            height: 12
+            shrinkY: 1
+            lifetime: 15
+            frontColor: fffac6
+            backColor: d8d97f
+            hitColor: d8d97f
+            despawnEffect: none
+            collidesAir: false
+        }
+        fragBullets: 15
+        frontColor: fffac6
+        backColor: d8d97f
+        hitColor: d8d97f
+        trailColor: d8d97f
+    }
+}
+buildTime: 1080
+requirements: [
+graphite/200,
+titanium/135,
+plastanium/60
+]
