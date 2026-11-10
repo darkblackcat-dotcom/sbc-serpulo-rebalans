@@ -1,0 +1,9 @@
+{
+  "name": "sbc",
+  "displayName": "Serpulo Balansed",
+  "author": "[#0]ЧЕРНЫЙ КОТ[]",
+  "description": "Изменяет характеристики ванильных блоков и юнитов.\ndiscord: @dark_black_cat",
+  "version": "0.3",
+  "minGameVersion": "160"
+  "icon": "icon.png"
+}
