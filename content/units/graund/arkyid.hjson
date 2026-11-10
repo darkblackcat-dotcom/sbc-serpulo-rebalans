@@ -1,1 +1,6 @@
-
+abilities: [{
+    type: SpawnDeathAbility
+    unit: spiroct
+    amount: 3
+    spread: 8
+}]

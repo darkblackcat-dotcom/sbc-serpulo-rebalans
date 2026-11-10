@@ -1,0 +1,6 @@
+abilities: [{
+    type: SpawnDeathAbility
+    unit: arkyid
+    amount: 3
+    spread: 8
+}]
