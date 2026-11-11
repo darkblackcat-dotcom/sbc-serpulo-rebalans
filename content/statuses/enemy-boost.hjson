@@ -1,6 +1,5 @@
-{
-  speedMultiplier: 2.5
-  color: ffd37f
-  effect: overclocked
-  show: false
-}
+speedMultiplier: 2.5
+color: ffd37f
+effect: overclocked
+effectChance: 0.05
+show: false
