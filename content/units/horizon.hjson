@@ -1,0 +1,40 @@
+weapons: [{
+    minShootVelocity: 1
+    x: 3
+    shootY: 0
+    reload: 12
+    shootCone: 180
+    ejectEffect: none
+    inaccuracy: 15
+    ignoreRotation: true
+    shootSound: shootHorizon
+    soundPitchMax: 1.2
+    bullet: {
+        type: BombBulletType
+        splashDamage: 27
+        splashDamageRadius: 24.8
+        width: 10
+        height: 14
+        hitEffect: flakExplosion
+        shootEffect: none
+        smokeEffect: none
+        status: blasted
+        statusDuration: 60
+    }
+}
+    {
+        shootOnDeath: true
+        shootOnDeathEffect: massiveExplosion
+        controllable: false
+        mirror: false
+        shootCone: 360
+        reload: 1
+        shootSound: none
+        x: 0
+        y: 0
+        bullet: {
+            type: ExplosionBulletType
+            splashDamage: 135
+            splashDamageRadius: 24.8
+        }
+    }]
