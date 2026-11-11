@@ -5,4 +5,4 @@ require("override-icon");
 require("emoji");
 require("force-dome");
 require("fogpermanent");
-require("enemy-boost");
+require("sbc-ability");
