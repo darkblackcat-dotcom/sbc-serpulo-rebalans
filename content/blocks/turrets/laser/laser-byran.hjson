@@ -83,7 +83,7 @@ shootSoundVolume: 0.35
 soundPitchMin: 0.65
 soundPitchMax: 0.75
 requirements: [
-copper/125,
+copper/125
 graphite/60
 titanium/45
 silicon/60

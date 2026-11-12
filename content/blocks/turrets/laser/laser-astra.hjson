@@ -60,8 +60,8 @@ soundPitchMin: 0.75
 soundPitchMax: 0.85
 heatColor: ff7a5a
 requirements: [
-copper/75,
-lead/75,
+copper/75
+lead/75
 graphite/25
 ]
 research: {
