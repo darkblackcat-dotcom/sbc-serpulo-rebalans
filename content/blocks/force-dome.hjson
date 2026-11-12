@@ -6,10 +6,10 @@ health: 800
 shieldHealth: 3300
 itemCapacity: 20
 requirements: [
-  titanium/650,
-  silicon/600,
-  plastanium/450,
-  phase-fabric/400,
+  titanium/650
+  silicon/600
+  plastanium/450
+  phase-fabric/400
 ]
 consumes: {
   power: 18
