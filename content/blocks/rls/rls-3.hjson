@@ -5,9 +5,9 @@ canOverdrive: false
 category: effect
 buildVisibility: fogOnly
 requirements: [
-graphite/315,
-silicon/280,
-titanium/240,
+graphite/315
+silicon/280
+titanium/240
 surge-alloy/120
 ]
 health: 120

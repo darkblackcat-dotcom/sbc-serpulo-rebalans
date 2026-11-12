@@ -5,9 +5,9 @@ canOverdrive: false
 category: effect
 buildVisibility: fogOnly
 requirements: [
-copper/50,
-lead/50,
-graphite/35,
+copper/50
+lead/50
+graphite/35
 silicon/20
 ]
 health: 120
