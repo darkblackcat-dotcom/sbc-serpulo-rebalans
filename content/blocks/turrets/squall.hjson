@@ -145,8 +145,8 @@ drawer: {
     ]
 }
 requirements: [
-graphite/115,
-silicon/75,
+graphite/115
+silicon/75
 titanium/35
 ]
 category: turret
