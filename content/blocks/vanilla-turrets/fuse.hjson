@@ -1,3 +1,6 @@
 range: 116
 trackingRange: 136
 fogRadiusMultiplier: 0.85
+research: {
+    parent: ripple
+}

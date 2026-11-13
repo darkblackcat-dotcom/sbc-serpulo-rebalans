@@ -137,7 +137,10 @@ ammoTypes: {
 }
 buildTime: 1080
 requirements: [
-graphite/200,
-titanium/135,
+graphite/200
+titanium/135
 plastanium/60
 ]
+research: {
+    parent: squall
+}
